@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# 🧭 Lead Tracker Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**A lightweight, secure, and efficient sales lead tracking system built with React and Supabase.**
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📌 Overview
 
-### `npm start`
+The **Lead Tracker Dashboard** is a modern web-based application designed to help sales representatives and sales departments **track, manage, and report their daily sales activities and client visitations.** Whether you're an individual sales agent or a corporate team, this system offers an intuitive dashboard to log leads, monitor visits, and generate actionable insights — in real time.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Features
 
-### `npm test`
+✅ **User Authentication** – Secure login with email/password (powered by Supabase Auth)  
+✅ **Daily Activity Logging** – Submit details of client visits, business opportunities, and notes  
+✅ **Personal Dashboard** – View your logged visits with timestamps and location tracking  
+✅ **Simple Reporting** – Export visit data or view inline reports  
+✅ **Mobile-Ready UI** – Optimized for on-the-go sales reps  
+✅ **Built on modern tools** – React + Supabase = Scalable, Flexible, Reliable
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Use Cases
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 🔹 **Sales reps** tracking client visits, prospecting activity, and follow-ups  
+- 🔹 **Sales teams** managing decentralized agents with real-time submission logs  
+- 🔹 **Sales managers** generating performance reports for field agents  
+- 🔹 **Marketing teams** identifying hot lead areas and opportunity hotspots  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🏗️ Deployment Options
 
-### `npm run eject`
+### 🌐 Online Web Version
+We can help you deploy this app to your **existing domain** (e.g., `sales.yourcompany.com`) as a seamless web-based tool.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🖥️ Local/Offline Network Version
+Prefer a secure internal network? We can install this tool on individual laptops or PCs — fully functional **within your local office or branch network** with no need for cloud access.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📦 Tech Stack
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Frontend**: React (Create React App)
+- **Backend**: Supabase (PostgreSQL, Auth, RLS)
+- **Auth**: Email/Password login with session persistence
+- **Storage**: Secure cloud database with optional self-hosted alternatives
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🔧 Getting Started (for developers)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+# Clone the repo
+git clone https://github.com/johnlivingprooff/sales-tracker-dashboard.git
+cd sales-tracker-dashboard
 
-### Code Splitting
+# Install dependencies
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Add your Supabase project credentials
+# In the root of the project, create a `.env` file:
+REACT_APP_SUPABASE_URL=your_supabase_url
+REACT_APP_SUPABASE_ANON_KEY=your_supabase_anon_key
 
-### Analyzing the Bundle Size
+# Start the app
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## 📩 Want This for Your Sales Team?
+Whether you're a small business or a large marketing firm — we offer custom implementation tailored to your needs:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- ✅ Integrate with your website or subdomain
 
-### Advanced Configuration
+- ✅ Deploy internally for in-office sales teams
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- ✅ Brand it with your own logo and company name
 
-### Deployment
+- ✅ Provide training and documentation
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Take a look at the live demo at [Lead Tracker Dashboard Demo](#) to see it in action!
+📧 Contact me at [johnlivingprooff@gmail.com](mailto:johnlivingprooff@gmail.com) to discuss setup options.
 
-### `npm run build` fails to minify
+<br><br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## 📜 License
+This project is licensed under the MIT License — feel free to adapt it to your needs.
+
+---
+
+## 🙌 Contributing
+If you'd like to help improve this project — whether it's adding features, improving UI, or translating to other languages — feel free to open a pull request or issue.
