@@ -18,7 +18,7 @@ export default function VerifyEmail() {
                 </div>
                 <div className="card-message" style={{ textAlign: "center", padding: "2rem 1rem" }}>
                     <p>
-                        We've sent a verification link to your email, please check and verify your account to access the dashboard.
+                        We've sent a verification link to your email, please check and verify your account to access the dashboard. <br /><br /> If you don't see the email, please check your spam folder.
                     </p>
                 </div>
                 <a href="/" style={{ color: "#f86", textDecoration: "none", fontSize: "0.9rem", marginTop: "10px", textAlign: "center" }}>Go back to Login</a>
