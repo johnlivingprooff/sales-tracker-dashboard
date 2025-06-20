@@ -7,6 +7,7 @@ import {
 import { supabase } from './supabaseClient';
 
 import LoadingSkeleton from './components/LoadingSkeleton';
+import AdminRoute from './AdminRoute';
 
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -14,6 +15,7 @@ import Dashboard from './pages/Dashboard';
 import VerifyEmail from './pages/VerifyEmail';
 import ResetPassword from './pages/ResetPassword';
 import UpdatePassword from './pages/UpdatePassword';
+import AdminDashboard from './pages/AdminPanel';
 
 function ProtectedRoute({ children, session }) {
   return session ? children : <Navigate to="/" replace />;
@@ -61,6 +63,16 @@ function App() {
       element: (
         <ProtectedRoute session={session}>
           <UpdatePassword session={session} />
+        </ProtectedRoute>
+      ),
+    },
+    {
+      path: '/admin',
+      element: (
+        <ProtectedRoute session={session}>
+          <AdminRoute>
+            <AdminDashboard session={session} />
+          </AdminRoute>
         </ProtectedRoute>
       ),
     },

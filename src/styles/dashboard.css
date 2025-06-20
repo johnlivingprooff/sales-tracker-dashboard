@@ -48,7 +48,21 @@
     margin-left: -35px;
 }
 
-.nav-links ul a {
+.dashboard-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.nav-links ul a, .dashboard-link {
     margin: 0;
     display: flex;
     align-items: center;
@@ -60,7 +74,7 @@
     text-decoration: none;
 }
 
-.nav-links ul a:hover {
+.nav-links ul a:hover, .dashboard-link:hover {
     background-color: rgba(255, 135, 102, 0.864);
     border-radius: 5%;
     color: #fff;
