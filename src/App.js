@@ -11,11 +11,20 @@ import AdminRoute from './AdminRoute';
 
 import Login from './pages/Login';
 import Register from './pages/Register';
-import Dashboard from './pages/Dashboard';
 import VerifyEmail from './pages/VerifyEmail';
 import ResetPassword from './pages/ResetPassword';
 import UpdatePassword from './pages/UpdatePassword';
+
 import AdminDashboard from './pages/AdminPanel';
+// Dashboard pages
+import Overview from './pages/dashboard/Overview';
+import AppPref from './pages/dashboard/AppPref';
+import ProfileSettings from './pages/dashboard/ProfileSettings';
+import Tasks from './pages/dashboard/Tasks';
+import Leads from './pages/dashboard/Leads';
+import Visits from './pages/dashboard/Visits';
+import Activities from './pages/dashboard/Activities';
+
 
 function ProtectedRoute({ children, session }) {
   return session ? children : <Navigate to="/" replace />;
@@ -51,14 +60,6 @@ function App() {
     { path: '/verify-email', element: <VerifyEmail /> },
     { path: '/reset-password', element: <ResetPassword /> },
     {
-      path: '/dashboard',
-      element: (
-        <ProtectedRoute session={session}>
-          <Dashboard session={session} />
-        </ProtectedRoute>
-      ),
-    },
-    {
       path: '/update-password',
       element: (
         <ProtectedRoute session={session}>
@@ -73,6 +74,62 @@ function App() {
           <AdminRoute>
             <AdminDashboard session={session} />
           </AdminRoute>
+        </ProtectedRoute>
+      ),
+    },
+    {
+      path: '/dashboard',
+      element: (
+        <ProtectedRoute session={session}>
+          <Overview session={session} />
+        </ProtectedRoute>
+      ),
+    },
+    {
+      path: '/dashboard/app-preferences',
+      element: (
+        <ProtectedRoute session={session}>
+          <AppPref session={session} />
+        </ProtectedRoute>
+      ),
+    },
+    {
+      path: '/dashboard/activities',
+      element: (
+        <ProtectedRoute session={session}>
+          <Activities session={session} />
+        </ProtectedRoute>
+      ),
+    },
+    {
+      path: '/dashboard/leads',
+      element: (
+        <ProtectedRoute session={session}>
+          <Leads session={session} />
+        </ProtectedRoute>
+      ),
+    },
+    {
+      path: '/dashboard/profile-settings',
+      element: (
+        <ProtectedRoute session={session}>
+          <ProfileSettings session={session} />
+        </ProtectedRoute>
+      ),
+    },
+    {
+      path: '/dashboard/tasks',
+      element: (
+        <ProtectedRoute session={session}>
+          <Tasks session={session} />
+        </ProtectedRoute>
+      ),
+    },
+    {
+      path: '/dashboard/visits',
+      element: (
+        <ProtectedRoute session={session}>
+          <Visits session={session} />
         </ProtectedRoute>
       ),
     },

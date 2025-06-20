@@ -9,7 +9,7 @@
 
 /* navigation */
 .dash-nav-container {
-    width: 15vw;
+    width: 15.8vw;
     padding: 7px 25px;
     border-radius: 45px 0 0 45px;
     border: 1px solid #f86;
@@ -66,7 +66,7 @@
     margin: 0;
     display: flex;
     align-items: center;
-    border-radius: 30px;
+    border-radius: 5%;
     padding: 0 10px;
     transition: all 0.3s ease;
     font-size: 1rem;
@@ -78,6 +78,10 @@
     background-color: rgba(255, 135, 102, 0.864);
     border-radius: 5%;
     color: #fff;
+}
+
+.active-link {
+    background-color: rgba(255, 135, 102, 0.279);
 }
 
 .nav-links li {
@@ -92,9 +96,9 @@
 
 .nav-footer p {
     position: absolute;
-    bottom: 20px;
-    left: 70px;
-    font-size: 0.5em;
+    bottom: 24px;
+    left: 120px;
+    font-size: 0.2em;
 }
 
 .nav-footer h2 {
@@ -131,4 +135,141 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-size: 1rem;
+}
+
+.dashboard-content {
+    padding: 15px 35px;
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    /* background-color: #f88; */
+}
+
+/* User Header */
+.user-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: rgb(124, 91, 82); */
+    height: 8vh;
+    margin-top: 5px;
+    width: 100%;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #f86;
+}
+
+.welcome-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    /* background-color: rgb(49, 36, 32); */
+}
+
+.welcome-info h3 {
+    font-size: 1.2rem;
+}
+
+.user-sett p {
+    font-size: 1rem;
+    color: #f0f2f5;
+    padding: 15px;
+}
+
+.user-sett {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: auto;
+    height: 6vh;
+    background-color: #f86;
+    border-radius: 45px;
+    place-items: center;
+    transition: all ease-in 0.3s;
+    box-shadow: 2px 5px 12px rgba(0, 0, 0, 0.032);
+    cursor: pointer;
+}
+
+.nav-profile-pic {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    padding: 10px 15px;
+    transition: all ease-in 0.3s;
+}
+
+.nav-profile-pic-skeleton {
+    padding: 10px 10px;
+    margin-top: -18px;
+}
+
+.nav-profile-pic:hover {
+    transform: scale(1.05);
+}
+
+#notif-bell {
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+#notif-bell:hover {
+    transform: scale(1.05);
+    color: #ff6;
+}
+
+.user-sett:hover {
+    transform: translateY(-3px);
+    box-shadow: 2px 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+}
+
+.search input {
+    width: 25vw;
+    height: 5vh;
+    background-color: #fff;
+    border-radius: 45px;
+    border: 1px solid #f86;
+    padding: 0 15px;
+    box-shadow: 2px 5px 12px rgba(0, 0, 0, 0.032);
+}
+
+.search input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 135, 102, 0.5);
+}
+.search input::placeholder {
+    color: #888;
+    font-size: 1rem;
+}
+.search input:hover {
+    border-color: #f88;
+}
+.search input:focus {
+    border-color: #f86;
+}
+.search-icon {
+    background-color: #f86;
+    color: #fff;
+    border: none;
+    border-radius: 45px;
+    padding: 10px 20px;
+    margin-left: -45px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.search-icon:hover {
+    background-color: #f88;
+    transform: scale(1.05);
+}
+.search-icon:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 135, 102, 0.5);
 }

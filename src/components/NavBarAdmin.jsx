@@ -22,7 +22,7 @@ export default function NavBar() {
       <div className="nav-head">
         <img src={logo} alt="Alo-Sales" id="logo" />
         &nbsp;&nbsp;
-        <p style={{fontSize: '1.2rem'}}>Admin Panel | Alo</p>
+        <p style={{fontSize: '1.2rem'}}>Admin Panel | <span style={{background: 'linear-gradient(90deg, #f86, #f6a)', WebkitBackgroundClip: 'text', color: 'transparent'}}>Alo</span></p>
       </div>
 
       <nav className="nav-links">

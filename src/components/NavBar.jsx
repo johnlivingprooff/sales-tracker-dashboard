@@ -9,8 +9,10 @@ import { BsPersonFillGear } from "react-icons/bs";
 import { BiSupport } from "react-icons/bi";
 import LoadingSkeleton from "./LoadingSkeleton";
 import { useUserContext } from "../contexts/UserContext.js";
+import { NavLink } from "react-router-dom";
 
-export default function NavBar() {
+
+export default function SideNav() {
   const { user, profile, loading } = useUserContext();
 
   const avatarUrl = profile?.avatar_url;
@@ -27,22 +29,40 @@ export default function NavBar() {
 
       <nav className="nav-links">
         <ul>
-          <a href="#"><MdSpaceDashboard /><li>Overview</li></a>
-          <a href="#"><MdLeaderboard /><li>My Leads</li></a>
-          <a href="#"><FaCarAlt /><li>Today's Visits</li></a>
-          <a href="#"><FaCalendar /><li>Up-Coming Activities</li></a>
-          <a href="#"><CgGoogleTasks /><li>Tasks/Plans</li></a>
+          {/* {profile?.role !== 'admin' ? (<br />): null} */}
+          <NavLink to="/dashboard">
+            <MdSpaceDashboard /><li>Overview</li>
+          </NavLink>
+          <NavLink to="/dashboard/leads" className={({ isActive }) => isActive ? "active-link" : ""}>
+            <MdLeaderboard /><li>My Leads</li>
+          </NavLink>
+          <NavLink to="/dashboard/visits" className={({ isActive }) => isActive ? "active-link" : ""}>
+            <FaCarAlt /><li>Today's Visits</li>
+          </NavLink>
+          <NavLink to="/dashboard/activities" className={({ isActive }) => isActive ? "active-link" : ""}>
+            <FaCalendar /><li>My Activities</li>
+          </NavLink>
+          <NavLink to="/dashboard/tasks" className={({ isActive }) => isActive ? "active-link" : ""}>
+            <CgGoogleTasks /><li>Tasks/Plans</li>
+          </NavLink>
           <br />
           <hr width="100%" color="#f88" height="0.5px" />
           <br />
-          <a href="#"><BsPersonFillGear /><li>Profile Settings</li></a>
-          <a href="#"><FaGear /><li>App Preferences</li></a>
-          <a href="#"><BiSupport /><li>Support</li></a>
+          <a href="/dashboard/profile-settings"><BsPersonFillGear /><li>Profile Settings</li></a>
+          <NavLink to="/dashboard/app-preferences" className={({ isActive }) => isActive ? "active-link" : ""}>
+            <FaGear /><li>App Preferences</li>
+          </NavLink>
+          <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}>
+            <BiSupport /><li>Support</li>
+          </NavLink>
           {profile?.role === 'admin' ? (
-            <a href="/admin"><MdAdminPanelSettings /><li>Admin Panel</li></a>
+            <NavLink to="/admin" className={({ isActive }) => isActive ? "active-link" : ""}>
+              <MdAdminPanelSettings /><li>Admin Panel</li>
+            </NavLink>
           ) : null}
         </ul>
       </nav>
+        {profile?.role !== 'admin' ? (<><br /><br /></>): null}
 
       <div className="nav-footer">
         <div>
