@@ -1,0 +1,120 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: #f0f2f5;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* navigation */
+.dash-nav-container {
+    width: 15vw;
+    padding: 7px 25px;
+    border-radius: 45px 0 0 45px;
+    border: 1px solid #f86;
+}
+
+.nav-head {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: #f88 1px solid;
+    
+}
+
+.nav-head p {
+    padding-top: 8px;
+    font-size: 1.5rem;
+    font-weight: 450;
+    color: #181A26;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    margin-top: 10px;
+    filter: invert(1);
+}
+
+.nav-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    list-style: none;
+    margin-left: -35px;
+}
+
+.nav-links ul a {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    padding: 0 10px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    color: #181A26;
+    text-decoration: none;
+}
+
+.nav-links ul a:hover {
+    background-color: rgba(255, 135, 102, 0.864);
+    border-radius: 5%;
+    color: #fff;
+}
+
+.nav-links li {
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links li:hover {
+    border-radius: 5%;
+    color: #fff;
+}
+
+.nav-footer p {
+    position: absolute;
+    bottom: 20px;
+    left: 70px;
+    font-size: 0.5em;
+}
+
+.nav-footer h2 {
+    font-size: 0.8rem;
+    margin-left: 55px;
+    padding-top: 12px;
+}
+
+.nav-footer h6 {
+    font-size: 0.6rem;
+    margin-top: -2px;
+    padding-left: 2px;
+    color: #888;
+    text-transform: capitalize;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: absolute;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logout-btn {
+    position: absolute;
+    bottom: 40px;
+    left: 220px;
+    color: #f88;
+    padding: 10px 12px;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}

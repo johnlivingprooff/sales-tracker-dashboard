@@ -45,7 +45,7 @@ export default function Login() {
   return (
     <div className="login-container">
       <Helmet>
-        <title>Login | Sales Tracker</title>
+        <title>Login | Alo—Sales</title>
         <meta name="description" content="Login to your account" />
       </Helmet>
 
@@ -99,7 +99,7 @@ export default function Login() {
         </form>
 
         <p>
-          <a href="/register">Forgot Your Password?</a> &nbsp;//&nbsp; Don't have an account?{" "}
+          <a href="/reset-password">Forgot Your Password?</a> &nbsp;//&nbsp; Don't have an account?{" "}
           <a href="/register">Register here</a>
         </p>
       </div>

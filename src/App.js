@@ -6,10 +6,14 @@ import {
 } from 'react-router-dom';
 import { supabase } from './supabaseClient';
 
+import LoadingSkeleton from './components/LoadingSkeleton';
+
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import VerifyEmail from './pages/VerifyEmail';
+import ResetPassword from './pages/ResetPassword';
+import UpdatePassword from './pages/UpdatePassword';
 
 function ProtectedRoute({ children, session }) {
   return session ? children : <Navigate to="/" replace />;
@@ -17,17 +21,17 @@ function ProtectedRoute({ children, session }) {
 
 function App() {
   const [session, setSession] = useState(null);
+  const [checkingSession, setCheckingSession] = useState(true);
 
   useEffect(() => {
-    // Get session on mount
     const getSession = async () => {
-      const { data, error } = await supabase.auth.getSession();
-      if (data?.session) setSession(data.session);
+      const { data } = await supabase.auth.getSession();
+      setSession(data?.session ?? null);
+      setCheckingSession(false);
     };
 
     getSession();
 
-    // Listen to auth state changes
     const { data: listener } = supabase.auth.onAuthStateChange(
       (_event, newSession) => {
         setSession(newSession);
@@ -43,6 +47,7 @@ function App() {
     { path: '/', element: <Login /> },
     { path: '/register', element: <Register /> },
     { path: '/verify-email', element: <VerifyEmail /> },
+    { path: '/reset-password', element: <ResetPassword /> },
     {
       path: '/dashboard',
       element: (
@@ -51,7 +56,17 @@ function App() {
         </ProtectedRoute>
       ),
     },
+    {
+      path: '/update-password',
+      element: (
+        <ProtectedRoute session={session}>
+          <UpdatePassword session={session} />
+        </ProtectedRoute>
+      ),
+    },
   ]);
+
+  if (checkingSession) return <LoadingSkeleton />;
 
   return <RouterProvider router={router} />;
 }

@@ -39,7 +39,6 @@ html, body {
 
 .loginHeader {
     text-align: center;
-    font-size: 24px;
     margin-bottom: 20px;
 }
 
@@ -53,6 +52,12 @@ html, body {
 .loginHeader h2 {
     font-size: 1.2rem;
     margin: 0;
+}
+
+.loginHeader p {
+    font-size: 0.9rem;
+    color: #a6a6a6;
+    padding: 0 20px;
 }
 
 .login-form form {

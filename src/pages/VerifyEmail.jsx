@@ -7,7 +7,7 @@ export default function VerifyEmail() {
     return (
         <div className="login-container">
             <Helmet>
-                <title>Verify Your Account | Sales Tracker</title>
+                <title>Verify Your Account | Alo—Sales</title>
                 <meta name="description" content="Verify your email to access the dashboard" />
             </Helmet>
 

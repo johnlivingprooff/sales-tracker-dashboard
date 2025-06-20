@@ -42,6 +42,8 @@ export default function Register() {
             options: {
                 data: {
                     full_name: fullName,
+                    position: "user", // Default position, can be changed later
+                    role: "user", // Default role, can be changed later
                 },
             },
         });
@@ -75,7 +77,7 @@ export default function Register() {
     return (
         <div className="login-container">
             <Helmet>
-                <title>Create an Account | Sales Tracker</title>
+                <title>Create an Account | Alo—Sales</title>
                 <meta name="description" content="Create a new account" />
             </Helmet>
 
