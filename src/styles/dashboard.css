@@ -94,11 +94,16 @@
     color: #fff;
 }
 
-.nav-footer p {
+.nav-footer {
     position: absolute;
-    bottom: 24px;
-    left: 120px;
-    font-size: 0.2em;
+    bottom: 20px;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 12px;
+    font-size: 0.5rem;
+    text-align: right;
 }
 
 .nav-footer h2 {
@@ -126,8 +131,8 @@
 
 .logout-btn {
     position: absolute;
-    bottom: 40px;
-    left: 220px;
+    bottom: 17px;
+    left: 195px;
     color: #f88;
     padding: 10px 12px;
     border-radius: 100%;
@@ -272,4 +277,53 @@
 .search-icon:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(255, 135, 102, 0.5);
+}
+
+.dashboard-overview {
+    /* background-color: rgba(255, 135, 102, 0.5); */
+    padding: 15px 0;
+}
+
+.dashboard-overview section {
+    display: flex;
+    gap: 20px;
+}
+
+.kpi-card {
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 5px 20px;
+    padding-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.kpi-icon {
+    font-size: 3rem;
+    color: #f86;
+    margin: 0 10px;
+}
+
+.kpi-card:hover {
+    border: #181A26 1px solid;
+}
+
+.kpi-content {
+    margin-top: -10px;
+    display: flex;
+    align-items: center;
+}
+
+.kpi-content p {
+    color: #f86;
+    font-size: 0.9rem;
+}
+
+.kpi-content h3 {
+    font-size: 1.5rem;
+    color: #181A26;
 }

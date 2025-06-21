@@ -10,8 +10,8 @@ import { BiSupport } from "react-icons/bi";
 import LoadingSkeleton from "./LoadingSkeleton";
 import { useUserContext } from "../contexts/UserContext.js";
 
-export default function NavBar() {
-  const { user, profile, loading } = useUserContext();
+export default function SideNav() {
+  const { profile, loading } = useUserContext();
 
   const avatarUrl = profile?.avatar_url;
 
@@ -39,7 +39,7 @@ export default function NavBar() {
           <a href="#"><FaGear /><li>App Preferences</li></a>
           <a href="#"><BiSupport /><li>Support</li></a>
           {profile?.role === 'admin' ? (
-            <a href="/admin"><MdAdminPanelSettings /><li>Admin Panel</li></a>
+            <a href="/dashboard"><MdSpaceDashboard /><li>&larr; Dashboard</li></a>
           ) : null}
         </ul>
       </nav>
@@ -79,7 +79,8 @@ export default function NavBar() {
             <FaPowerOff />
           </button>
         </div>
-        <p>© 2024 Alo—Sales. All rights reserved. Version 1.0.0</p>
+        {/* <br />
+        <br /> */}
       </div>
     </div>
   );

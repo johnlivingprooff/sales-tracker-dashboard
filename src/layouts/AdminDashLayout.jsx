@@ -1,7 +1,7 @@
 // import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import '../styles/dashboard.css';
-import SideNav from '../components/NavBar.jsx';
+import SideNav from '../components/NavBarAdmin.jsx';
 import { useUserContext } from '../contexts/UserContext.js';
 import LoadingSkeleton from '../components/LoadingSkeleton.jsx';
 import UserHeader from '../components/UserHeader.jsx';

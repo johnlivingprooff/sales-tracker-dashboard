@@ -13,7 +13,7 @@ import { NavLink } from "react-router-dom";
 
 
 export default function SideNav() {
-  const { user, profile, loading } = useUserContext();
+  const { profile, loading } = useUserContext();
 
   const avatarUrl = profile?.avatar_url;
 
@@ -99,7 +99,7 @@ export default function SideNav() {
             <FaPowerOff />
           </button>
         </div>
-        <p>© 2024 Alo—Sales. All rights reserved. Version 1.0.0</p>
+        
       </div>
     </div>
   );
